@@ -23,13 +23,22 @@ function draw(){
     image(video ,0 , 0, 600, 500);
     fill("#FF0000");
     stroke("#FF0000");
-    status = lily.isPlaying();
+    status_lily = lily.isPlaying();
     if(scoreleftwrist >= 0.2){
         circle(leftWristX,leftWristY,20);
         dance_monkey.stop();
-        if(status == false){
+        if(status_lily == false){
             lily.play();
             document.getElementById("song_name").innerHTML = "Playing Now: Lily by Alan Walker";
+        }
+    }
+    status_dance_monkey = dance_monkey.isPlaying();
+    if(scoreleftwrist >= 0.2){
+        circle(leftWristX,leftWristY,20);
+        lily.stop();
+        if(status_dance_monkey == false){
+            dance_monkey.play();
+            document.getElementById("song_name").innerHTML = "Playing Now: Dance Monkey by Tones and I";
         }
     }
 
