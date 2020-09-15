@@ -33,7 +33,7 @@ function draw(){
         }
     }
     status_dance_monkey = dance_monkey.isPlaying();
-    if(scoreleftwrist >= 0.2){
+    if(scorerightwrist >= 0.2){
         circle(leftWristX,leftWristY,20);
         lily.stop();
         if(status_dance_monkey == false){
@@ -41,7 +41,6 @@ function draw(){
             document.getElementById("song_name").innerHTML = "Playing Now: Dance Monkey by Tones and I";
         }
     }
-
 }
 
 function modelLoaded(){
